@@ -8,6 +8,10 @@
     "start": "webpack serve --open",
     "buid": "webpack --mode production"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bassignani/React-eShop.git"
+  },
   "keywords": [
     "react",
     "javascript"
@@ -38,3 +42,5 @@
     "style-loader": "^3.3.1"
   }
 }
+
+
