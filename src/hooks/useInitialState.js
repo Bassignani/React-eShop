@@ -5,8 +5,14 @@ const initialState = {
 }
 
 const useInitialSatate = () => {
-    
+ 
     const [state, setState] = useState(initialState);
+
+	const [toggleOrders, setToggle] = useState(false);
+
+	const setToggleOrders = () => {
+		setToggle(!toggleOrders);
+	}
 
     const addToCart = (payload) => {
         setState({
@@ -25,7 +31,9 @@ const useInitialSatate = () => {
 	return {
 		state,
 		addToCart,
-		removeFromCart
+		removeFromCart,
+		toggleOrders,
+		setToggleOrders
 	}
 }
 

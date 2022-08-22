@@ -5,7 +5,7 @@ const useGetProducts = (API) => {
     const [products, setProducts] = useState([]);
 	
 	useEffect(async () => {
-		const response = await axios(API);
+		const response = await axios(API);   //axios se instala desde la terminal->   npm i axios
 		setProducts(response.data);
 	}, []);
     return products;

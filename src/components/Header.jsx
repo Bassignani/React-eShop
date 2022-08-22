@@ -8,13 +8,14 @@ import  shoppingCart from "@icons/icon_shopping_cart.svg";
 import AppContext from "@context/AppContext";
 
 const Header = () => {
-	const [toggle, setToggle] = useState(false);
-	const [toggleOrders, setToggleOrders] = useState(false);
-	const {state} = useContext(AppContext);
 
-	const handleToggle = () => {
-		setToggle(!toggle);
+	const [toggleMenu, setToggleMenu] = useState(false);
+	const {state, toggleOrders, setToggleOrders} = useContext(AppContext);
+
+	const handleToggleMenu = () => {
+		setToggleMenu(!toggleMenu);
 	}
+
  	return (
 		<nav>
 			<img src={menu} alt="menu" className="menu" />
@@ -43,17 +44,17 @@ const Header = () => {
 			</div>
 			<div className="navbar-right">
 				<ul>
-					<li className="navbar-email" onClick={ handleToggle }>
+					<li className="navbar-email" onClick={ handleToggleMenu }>
 						martin@example.com
 					</li>
-					<li className="navbar-shopping-cart" onClick={() => setToggleOrders(!toggleOrders)}>
+					<li className="navbar-shopping-cart" onClick={() => setToggleOrders() }>
 						<img src={shoppingCart} alt="shopping cart" />
 							{ state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
 					</li>
 				</ul>
 			</div>
-			{ toggle &&  <Menu/> }   {/* Hace un IF, si toggle es verdadero muestra <Menu/>, si es falso no lo muestra*/}
-			{ toggleOrders && <MyOrder />}
+			{ toggleMenu &&  <Menu/> }   {/* Hace un IF, si toggle es verdadero muestra <Menu/>, si es falso no lo muestra*/}
+			{ toggleOrders && <MyOrder/>}
 		</nav>
 	);
 }

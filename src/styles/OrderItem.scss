@@ -23,3 +23,8 @@
 	font-size: var(--md);
 	font-weight: bold;
 }
+@import 'vars';
+
+.OrderItem img.close{
+	cursor: pointer;
+}

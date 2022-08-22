@@ -1,17 +1,46 @@
 @import 'vars';
 
+// .MyOrder {
+// 	width: 360px;
+// 	padding: 24px;
+// 	box-sizing: border-box;
+// 	position: absolute;
+// 	right: 0;
+// 	background-color: var(--white);
+// 	top: 60px;
+// 	bottom: 0px;
+// 	border-radius: 6px;
+// 	border: 1px solid var(--very-light-pink);
+// }
+
 .MyOrder {
-	width: 360px;
+	z-index: 2;
+	width: 400px;
 	padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
+	// right: -360px;
 	right: 0;
 	background-color: white;
 	top: 60px;
-	bottom: 0px;
+	bottom: 0;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
+	position: fixed;
+	// transition: 1s ease;
+	// animation: swipeLeft 1s ease forwards;	
 }
+// @keyframes swipeLeft {
+// 	100% {transform: translateX(-360px);}
+// }
+.order-content{
+	overflow-y: scroll;
+	max-height: 360px;
+	padding-right: 15px;
+}
+// .order-content::-webkit-scrollbar {
+//     display: none;
+// }
 .title-container {
 	display: flex;
 }
@@ -56,6 +85,9 @@
 	font-size: var(--md);
 	font-weight: bold;
 	height: 50px;
+}
+.flechita{
+	cursor: pointer;
 }
 @media (max-width: 640px) {
 	.MyOrder {

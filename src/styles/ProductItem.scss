@@ -34,6 +34,11 @@
 	margin-bottom: 0;
 	color: var(--very-light-pink);
 }
+
+img.cart-image{
+	cursor: pointer;
+}
+
 @media (max-width: 640px) {
 	.cards-container {
 		grid-template-columns: repeat(auto-fill, 140px);
